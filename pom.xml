@@ -1,0 +1,163 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<!-- Maven coordinates -->
+	<groupId>org.ardenus</groupId>
+	<artifactId>input</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	
+	<!-- Project information -->
+	<name>Ardenus Input</name>
+	<description>TODO Ardenus game engine.</description>
+	<url>http://gitlab.com/ardenus/ardenus-input/</url>
+	<inceptionYear>2017</inceptionYear>
+
+	<!-- Build properties -->
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<!-- Project licensing -->
+	<licenses>
+		<license>
+			<name>GNU LGPL License v3</name>
+			<url>https://opensource.org/licenses/LGPL-3.0</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	
+	<!-- Organization information -->
+	<organization>
+		<name>Ardenus Studios</name>
+		<url>https://ardenus.org/</url>
+	</organization>
+	
+	<dependencies>
+		<!-- Testing framework -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	
+	<!-- Build lifecycle -->
+	<build>
+		<defaultGoal>clean package install</defaultGoal>
+		
+		<resources>
+				<resource>
+					<directory>src/main/resources/</directory>
+				</resource>
+				<resource>
+					<directory>.</directory>
+				<includes>
+					<include>LICENSE</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<plugins>
+			<!-- Clean workspace -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.0.0</version>
+			</plugin>
+
+			<!-- Copy and process resource files -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.2</version>
+			</plugin>
+
+			<!-- Compile classes -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<!-- Perform unit testing -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.21.0</version>
+			</plugin>
+
+			<!-- Generate class jar file -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.0.2</version>
+			</plugin>
+
+			<!-- JavaDoc config -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<source>8</source>
+				</configuration>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Sources config -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Generate shaded jar file -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<artifactSet>
+						<excludes>
+							<exclude>org.apache.logging.log4j:log4j-api</exclude>  
+							<exclude>org.apache.logging.log4j:log4j-core</exclude>  
+						</excludes>
+					</artifactSet>
+					<shadedArtifactAttached>true</shadedArtifactAttached>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
