@@ -10,7 +10,7 @@
 	
 	<!-- Project information -->
 	<name>Ardenus Input</name>
-	<description>TODO Ardenus game engine.</description>
+	<description>An input system created primarily for video games.</description>
 	<url>http://gitlab.com/ardenus/ardenus-input/</url>
 	<inceptionYear>2017</inceptionYear>
 
