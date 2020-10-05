@@ -37,6 +37,27 @@
 	</organization>
 	
 	<dependencies>
+		<!-- Logging interface -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.13.2</version>
+		</dependency>
+
+		<!-- Logging implementation -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.13.2</version>
+		</dependency>
+	
+		<!-- Event system -->
+		<dependency>
+			<groupId>com.whirvex</groupId>
+			<artifactId>event</artifactId>
+			<version>1.0.0-BETA</version>
+		</dependency>
+	
 		<!-- Testing framework -->
 		<dependency>
 			<groupId>junit</groupId>
