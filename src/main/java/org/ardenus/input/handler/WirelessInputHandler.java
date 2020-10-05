@@ -22,19 +22,19 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.handler;
+package org.ardenus.input.handler;
 
 import static org.lwjgl.glfw.GLFW.*;
 
+import java.awt.Window;
 import java.nio.ByteBuffer;
 
-import org.ardenus.engine.graphics.Window;
-import org.ardenus.engine.input.Input;
-import org.ardenus.engine.input.controller.Controller;
-import org.ardenus.engine.input.controller.ControllerButton;
-import org.ardenus.engine.input.controller.ControllerType;
-import org.ardenus.engine.input.controller.wireless.WirelessController;
-import org.ardenus.engine.input.controller.wireless.WirelessControllerType;
+import org.ardenus.input.Input;
+import org.ardenus.input.controller.Controller;
+import org.ardenus.input.controller.ControllerButton;
+import org.ardenus.input.controller.ControllerType;
+import org.ardenus.input.controller.wireless.WirelessController;
+import org.ardenus.input.controller.wireless.WirelessControllerType;
 
 /**
  * An extension of the {@link InputHandler} that can be used to implement

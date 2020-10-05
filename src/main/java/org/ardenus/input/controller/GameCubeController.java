@@ -22,11 +22,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.controller;
+package org.ardenus.input.controller;
 
-import org.ardenus.engine.input.button.ButtonSetActions;
-import org.ardenus.engine.input.controller.axis.GamecubeAxis;
-import org.ardenus.engine.input.handler.InputHandler;
+import org.ardenus.input.button.ButtonSetActions;
+import org.ardenus.input.controller.axis.GamecubeAxis;
+import org.ardenus.input.handler.InputHandler;
 
 /**
  * A Nintendo GameCube controller connected to a Nintendo Wii U or Nintendo

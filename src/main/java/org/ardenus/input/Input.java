@@ -22,7 +22,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input;
+package org.ardenus.input;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -32,15 +32,14 @@ import java.util.function.Consumer;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.ardenus.Ardenus;
 import org.ardenus.EventList;
-import org.ardenus.engine.Ardenus;
-import org.ardenus.engine.graphics.Window;
-import org.ardenus.engine.input.button.Button;
-import org.ardenus.engine.input.button.ButtonSet;
-import org.ardenus.engine.input.controller.Controller;
-import org.ardenus.engine.input.controller.action.ControllerActionProfile;
-import org.ardenus.engine.input.controller.keyboard.KeyboardController;
-import org.ardenus.engine.input.handler.InputHandler;
+import org.ardenus.input.button.Button;
+import org.ardenus.input.button.ButtonSet;
+import org.ardenus.input.controller.Controller;
+import org.ardenus.input.controller.action.ControllerActionProfile;
+import org.ardenus.input.controller.keyboard.KeyboardController;
+import org.ardenus.input.handler.InputHandler;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.glfw.GLFWKeyCallbackI;
 
@@ -52,10 +51,10 @@ import org.lwjgl.glfw.GLFWKeyCallbackI;
  * @see Button
  * @see ButtonSet
  * @see Controller
- * @see org.ardenus.engine.input.controller.ControllerType ControllerType
- * @see org.ardenus.engine.input.controller.axis.ControllerAxis ControllerAxis
- * @see org.ardenus.engine.input.controller.ControllerButton ControllerButton
- * @see org.ardenus.engine.input.controller.action.ControllerAction
+ * @see org.ardenus.input.controller.ControllerType ControllerType
+ * @see org.ardenus.input.controller.axis.ControllerAxis ControllerAxis
+ * @see org.ardenus.input.controller.ControllerButton ControllerButton
+ * @see org.ardenus.input.controller.action.ControllerAction
  *      ControllerAction
  * @see InputHandler
  */

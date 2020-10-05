@@ -22,16 +22,16 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input;
+package org.ardenus.input;
 
 import static org.lwjgl.glfw.GLFW.*;
 
-import org.ardenus.engine.input.button.Button;
-import org.ardenus.engine.input.button.ButtonSet;
-import org.ardenus.engine.input.controller.Controller;
-import org.ardenus.engine.input.controller.ControllerButton;
-import org.ardenus.engine.input.controller.GamepadDirection;
-import org.ardenus.engine.input.controller.action.ControllerAction;
+import org.ardenus.input.button.Button;
+import org.ardenus.input.button.ButtonSet;
+import org.ardenus.input.controller.Controller;
+import org.ardenus.input.controller.ControllerButton;
+import org.ardenus.input.controller.GamepadDirection;
+import org.ardenus.input.controller.action.ControllerAction;
 
 /**
  * Allows for classes to listen for events relating to input.
@@ -41,7 +41,7 @@ import org.ardenus.engine.input.controller.action.ControllerAction;
  * 
  * @author Trent Summerlin
  * @since Ardenus Input v0.0.1-SNAPSHOT
- * @see org.ardenus.engine.input.Input Input
+ * @see org.ardenus.input.Input Input
  */
 public interface InputListener {
 

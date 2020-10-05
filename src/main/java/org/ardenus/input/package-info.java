@@ -32,7 +32,7 @@
  * 
  * @author Trent Summerlin
  * @since Ardenus Input v0.0.1-SNAPSHOT
- * @see org.ardenus.engine.input.Input Input
- * @see org.ardenus.engine.input.InputListener InputListener
+ * @see org.ardenus.input.Input Input
+ * @see org.ardenus.input.InputListener InputListener
  */
-package org.ardenus.engine.input;
+package org.ardenus.input;

@@ -22,12 +22,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.button;
+package org.ardenus.input.button;
 
 import java.util.ArrayList;
 
-import org.ardenus.engine.input.Input;
-import org.ardenus.engine.input.InputListener;
+import org.ardenus.input.Input;
+import org.ardenus.input.InputListener;
 
 /**
  * A set of buttons that can used to group buttons together and manage them

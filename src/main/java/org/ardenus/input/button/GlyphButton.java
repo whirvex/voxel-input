@@ -22,12 +22,13 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.button;
+package org.ardenus.input.button;
 
-import org.ardenus.engine.Deletable;
-import org.ardenus.engine.DeletedException;
-import org.ardenus.engine.graphics.Color;
-import org.ardenus.engine.graphics.glyph.Glyph;
+import java.awt.Color;
+
+import org.ardenus.Deletable;
+import org.ardenus.DeletedException;
+import org.ardenus.graphics.glyph.Glyph;
 
 /**
  * A {@link Glyph} based button.

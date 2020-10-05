@@ -22,12 +22,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.controller.wireless;
+package org.ardenus.input.controller.wireless;
 
 import java.nio.FloatBuffer;
 
-import org.ardenus.engine.input.controller.Controller;
-import org.ardenus.engine.input.controller.ControllerType;
+import org.ardenus.input.controller.Controller;
+import org.ardenus.input.controller.ControllerType;
 import org.lwjgl.glfw.GLFW;
 
 /**

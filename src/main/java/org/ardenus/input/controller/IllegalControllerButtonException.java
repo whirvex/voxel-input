@@ -22,14 +22,14 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.controller;
+package org.ardenus.input.controller;
 
 /**
  * Signals an invalid {@link ControllerButton} has been given to a
  * {@link Controller} that does not support it.
  * <p>
  * An example of this would be a Sony PlayStation 4 cross button to the
- * {@link Controller#bind(org.ardenus.engine.input.controller.action.ControllerAction, ControllerButton...)
+ * {@link Controller#bind(org.ardenus.input.controller.action.ControllerAction, ControllerButton...)
  * bindAction(ControllerAction, ControllerButton...)} method of a Microsoft XBOX
  * One/XBOX 360 controller.
  * 

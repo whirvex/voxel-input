@@ -31,9 +31,9 @@
  * 
  * @author Trent Summerlin
  * @since Ardenus Input v0.0.1-SNAPSHOT
- * @see org.ardenus.engine.input.controller.action.ControllerAction
+ * @see org.ardenus.input.controller.action.ControllerAction
  *      ControllerAction
- * @see org.ardenus.engine.input.controller.action.ControllerActionProfile
+ * @see org.ardenus.input.controller.action.ControllerActionProfile
  *      ControllerActionProfile
  */
-package org.ardenus.engine.input.controller.action;
+package org.ardenus.input.controller.action;

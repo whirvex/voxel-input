@@ -22,7 +22,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.controller.action;
+package org.ardenus.input.controller.action;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,8 +30,8 @@ import java.util.HashMap;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.ardenus.engine.input.controller.Controller;
-import org.ardenus.engine.input.controller.ControllerButton;
+import org.ardenus.input.controller.Controller;
+import org.ardenus.input.controller.ControllerButton;
 
 /**
  * A set of actions that can be applied to any controller dynamically and

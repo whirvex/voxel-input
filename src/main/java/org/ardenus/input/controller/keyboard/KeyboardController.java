@@ -22,11 +22,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.controller.keyboard;
+package org.ardenus.input.controller.keyboard;
 
 import static com.logitech.gaming.LogiLED.*;
 import static org.lwjgl.glfw.GLFW.*;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -37,15 +38,14 @@ import java.nio.ByteBuffer;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.ardenus.engine.graphics.Camera;
-import org.ardenus.engine.graphics.Color;
-import org.ardenus.engine.graphics.texture.Texture;
-import org.ardenus.engine.input.Input;
-import org.ardenus.engine.input.button.ButtonSetActions;
-import org.ardenus.engine.input.controller.Controller;
-import org.ardenus.engine.input.controller.ControllerType;
-import org.ardenus.engine.input.handler.InputHandler;
-import org.ardenus.engine.input.handler.KeyboardHandler;
+import org.ardenus.graphics.Camera;
+import org.ardenus.graphics.texture.Texture;
+import org.ardenus.input.Input;
+import org.ardenus.input.button.ButtonSetActions;
+import org.ardenus.input.controller.Controller;
+import org.ardenus.input.controller.ControllerType;
+import org.ardenus.input.handler.InputHandler;
+import org.ardenus.input.handler.KeyboardHandler;
 
 /**
  * A keyboard and mouse that can be used for input.

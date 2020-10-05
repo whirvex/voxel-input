@@ -22,7 +22,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.button;
+package org.ardenus.input.button;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -30,7 +30,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * If a {@link org.ardenus.engine.input.controller.Controller Controller} class
+ * If a {@link org.ardenus.input.controller.Controller Controller} class
  * has this annotation, it will allow for the default buttons needed by
  * {@link ButtonSet} to be added to the global {@link ButtonSet} profile when a
  * controller of its type is connected.
@@ -49,12 +49,12 @@ public @interface ButtonSetActions {
 
 	/**
 	 * Returns the name of the
-	 * {@link org.ardenus.engine.input.controller.ControllerButton
+	 * {@link org.ardenus.input.controller.ControllerButton
 	 * ControllerButton} field for pressing buttons in the class that has the
 	 * annotation.
 	 * 
 	 * @return the name of the
-	 *         {@link org.ardenus.engine.input.controller.ControllerButton
+	 *         {@link org.ardenus.input.controller.ControllerButton
 	 *         ControllerButton} field for pressing buttons in the class that
 	 *         has the annotation.
 	 */
@@ -62,12 +62,12 @@ public @interface ButtonSetActions {
 
 	/**
 	 * Returns the name of the
-	 * {@link org.ardenus.engine.input.controller.ControllerButton
+	 * {@link org.ardenus.input.controller.ControllerButton
 	 * ControllerButton} field for going back in the class that has the
 	 * annotation.
 	 * 
 	 * @return the name of the
-	 *         {@link org.ardenus.engine.input.controller.ControllerButton
+	 *         {@link org.ardenus.input.controller.ControllerButton
 	 *         ControllerButton} field for going back in the class that has the
 	 *         annotation.
 	 */
@@ -75,12 +75,12 @@ public @interface ButtonSetActions {
 
 	/**
 	 * Returns the name of the
-	 * {@link org.ardenus.engine.input.controller.ControllerButton
+	 * {@link org.ardenus.input.controller.ControllerButton
 	 * ControllerButton} field for scrolling up in the class that has the
 	 * annotation.
 	 * 
 	 * @return the name of the
-	 *         {@link org.ardenus.engine.input.controller.ControllerButton
+	 *         {@link org.ardenus.input.controller.ControllerButton
 	 *         ControllerButton} field for scrolling up in the class that has
 	 *         the annotation.
 	 */
@@ -88,12 +88,12 @@ public @interface ButtonSetActions {
 
 	/**
 	 * Returns the name of the
-	 * {@link org.ardenus.engine.input.controller.ControllerButton
+	 * {@link org.ardenus.input.controller.ControllerButton
 	 * ControllerButton} field for scrolling down in the class that has the
 	 * annotation.
 	 * 
 	 * @return the name of the
-	 *         {@link org.ardenus.engine.input.controller.ControllerButton
+	 *         {@link org.ardenus.input.controller.ControllerButton
 	 *         ControllerButton} field for scrolling down in the class that has
 	 *         the annotation.
 	 */
@@ -101,12 +101,12 @@ public @interface ButtonSetActions {
 
 	/**
 	 * Returns the name of the
-	 * {@link org.ardenus.engine.input.controller.ControllerButton
+	 * {@link org.ardenus.input.controller.ControllerButton
 	 * ControllerButton} field for scrolling left in the class that has the
 	 * annotation.
 	 * 
 	 * @return the name of the
-	 *         {@link org.ardenus.engine.input.controller.ControllerButton
+	 *         {@link org.ardenus.input.controller.ControllerButton
 	 *         ControllerButton} field for scrolling left in the class that has
 	 *         the annotation.
 	 */
@@ -114,12 +114,12 @@ public @interface ButtonSetActions {
 
 	/**
 	 * Returns the name of the
-	 * {@link org.ardenus.engine.input.controller.ControllerButton
+	 * {@link org.ardenus.input.controller.ControllerButton
 	 * ControllerButton} field for scrolling right in the class that has the
 	 * annotation.
 	 * 
 	 * @return the name of the
-	 *         {@link org.ardenus.engine.input.controller.ControllerButton
+	 *         {@link org.ardenus.input.controller.ControllerButton
 	 *         ControllerButton} field for scrolling right in the class that has
 	 *         the annotation.
 	 */

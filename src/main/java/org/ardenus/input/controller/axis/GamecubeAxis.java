@@ -22,7 +22,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.controller.axis;
+package org.ardenus.input.controller.axis;
 
 /**
  * Used to convert the axes of Nintendo GameCube controllers to the standardized

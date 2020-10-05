@@ -22,9 +22,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.controller;
+package org.ardenus.input.controller;
 
-import org.ardenus.engine.input.controller.action.ControllerAction;
+import org.ardenus.input.controller.action.ControllerAction;
 
 /**
  * Represents a direction that is being pressed on a controller with either with

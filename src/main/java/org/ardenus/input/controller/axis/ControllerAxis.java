@@ -22,9 +22,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.controller.axis;
+package org.ardenus.input.controller.axis;
 
-import org.ardenus.engine.input.controller.Controller;
+import org.ardenus.input.controller.Controller;
 
 /**
  * Used for converting axis information to the standardized <code>-1.0F</code>

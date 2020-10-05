@@ -22,20 +22,20 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input;
+package org.ardenus.input;
 
 import java.util.ArrayList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.ardenus.engine.input.button.Button;
-import org.ardenus.engine.input.button.ButtonSet;
-import org.ardenus.engine.input.button.ButtonSetActions;
-import org.ardenus.engine.input.controller.Controller;
-import org.ardenus.engine.input.controller.ControllerButton;
-import org.ardenus.engine.input.controller.GamepadDirection;
-import org.ardenus.engine.input.controller.action.ControllerAction;
-import org.ardenus.engine.input.controller.action.ControllerActionProfile;
+import org.ardenus.input.button.Button;
+import org.ardenus.input.button.ButtonSet;
+import org.ardenus.input.button.ButtonSetActions;
+import org.ardenus.input.controller.Controller;
+import org.ardenus.input.controller.ControllerButton;
+import org.ardenus.input.controller.GamepadDirection;
+import org.ardenus.input.controller.action.ControllerAction;
+import org.ardenus.input.controller.action.ControllerActionProfile;
 
 /**
  * Instantiated and added as a listener by {@link Input} during initialization.

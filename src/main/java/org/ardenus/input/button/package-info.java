@@ -27,7 +27,7 @@
  * 
  * @author Trent Summerlin
  * @since Ardenus Input v0.0.1-SNAPSHOT
- * @see org.ardenus.engine.input.button.ButtonSet ButtonSet
+ * @see org.ardenus.input.button.ButtonSet ButtonSet
  * @see org.ardnus.engine.input.button.Button Button
  */
-package org.ardenus.engine.input.button;
+package org.ardenus.input.button;

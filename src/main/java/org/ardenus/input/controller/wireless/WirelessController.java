@@ -22,18 +22,19 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.controller.wireless;
+package org.ardenus.input.controller.wireless;
 
-import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.glfw.GLFW.glfwGetJoystickGUID;
+import static org.lwjgl.glfw.GLFW.glfwGetJoystickName;
 
 import java.lang.reflect.InvocationTargetException;
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 
-import org.ardenus.engine.input.Input;
-import org.ardenus.engine.input.controller.Controller;
-import org.ardenus.engine.input.controller.ControllerButton;
-import org.ardenus.engine.input.handler.WirelessInputHandler;
+import org.ardenus.input.Input;
+import org.ardenus.input.controller.Controller;
+import org.ardenus.input.controller.ControllerButton;
+import org.ardenus.input.handler.WirelessInputHandler;
 
 /**
  * A wireless controller handled and managed via the GLFW API.

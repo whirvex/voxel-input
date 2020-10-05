@@ -33,6 +33,6 @@
  * 
  * @author Trent Summerlin
  * @since Ardenus Input v0.0.1-SNAPSHOT
- * @see org.ardenus.engine.input.controller.axis.ControllerAxis ControllerAxis
+ * @see org.ardenus.input.controller.axis.ControllerAxis ControllerAxis
  */
-package org.ardenus.engine.input.controller.axis;
+package org.ardenus.input.controller.axis;

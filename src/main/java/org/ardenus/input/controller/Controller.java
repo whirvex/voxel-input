@@ -22,16 +22,16 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.controller;
+package org.ardenus.input.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.apache.commons.lang3.ArrayUtils;
-import org.ardenus.engine.input.Input;
-import org.ardenus.engine.input.controller.action.ControllerAction;
-import org.ardenus.engine.input.controller.keyboard.KeyboardController;
-import org.ardenus.engine.input.handler.InputHandler;
+import org.ardenus.input.Input;
+import org.ardenus.input.controller.action.ControllerAction;
+import org.ardenus.input.controller.keyboard.KeyboardController;
+import org.ardenus.input.handler.InputHandler;
 
 /**
  * A controller.

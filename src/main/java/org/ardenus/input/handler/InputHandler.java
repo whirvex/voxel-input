@@ -22,10 +22,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.handler;
+package org.ardenus.input.handler;
 
-import org.ardenus.engine.graphics.Window;
-import org.ardenus.engine.input.controller.Controller;
+import java.awt.Window;
+
+import org.ardenus.input.controller.Controller;
 
 /**
  * An input handler for a controller.

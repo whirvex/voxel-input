@@ -22,19 +22,24 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.handler;
+package org.ardenus.input.handler;
 
-import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.glfw.GLFW.GLFW_KEY_LAST;
+import static org.lwjgl.glfw.GLFW.GLFW_KEY_RIGHT;
+import static org.lwjgl.glfw.GLFW.GLFW_KEY_SPACE;
+import static org.lwjgl.glfw.GLFW.GLFW_KEY_UP;
+import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_1;
+import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_8;
 
+import java.awt.Window;
 import java.util.jar.Attributes.Name;
 
-import org.ardenus.engine.Ardenus;
-import org.ardenus.engine.Game;
-import org.ardenus.engine.graphics.Window;
-import org.ardenus.engine.input.Input;
-import org.ardenus.engine.input.controller.Controller;
-import org.ardenus.engine.input.controller.keyboard.KeyboardController;
-import org.ardenus.engine.input.controller.keyboard.KeyboardKey;
+import org.ardenus.Ardenus;
+import org.ardenus.Game;
+import org.ardenus.input.Input;
+import org.ardenus.input.controller.Controller;
+import org.ardenus.input.controller.keyboard.KeyboardController;
+import org.ardenus.input.controller.keyboard.KeyboardKey;
 import org.lwjgl.glfw.GLFWScrollCallbackI;
 
 /**
@@ -180,6 +185,12 @@ public class KeyboardHandler extends InputHandler implements GLFWScrollCallbackI
 		}
 		this.xScroll = xScroll;
 		this.yScroll = yScroll;
+	}
+
+	@Override
+	public void onUpdate(Window window, Controller[] controllers) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

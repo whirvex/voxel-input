@@ -22,15 +22,15 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.button;
+package org.ardenus.input.button;
 
-import org.ardenus.engine.input.Input;
-import org.ardenus.engine.input.controller.action.ControllerAction;
+import org.ardenus.input.Input;
+import org.ardenus.input.controller.action.ControllerAction;
 
 /**
  * Represents a button that can be interacted with.
  * <p>
- * Buttons that implement the {@link org.ardenus.engine.input.InputListener
+ * Buttons that implement the {@link org.ardenus.input.InputListener
  * InputListener} interface will automatically be added as input listeners when
  * one of the button sets they belong to are enabled. When the last button set
  * that the button belongs to is disabled, then it will be automatically

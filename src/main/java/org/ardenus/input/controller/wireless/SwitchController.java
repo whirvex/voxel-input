@@ -22,16 +22,16 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.controller.wireless;
+package org.ardenus.input.controller.wireless;
 
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 
-import org.ardenus.engine.input.button.ButtonSetActions;
-import org.ardenus.engine.input.controller.ControllerButton;
-import org.ardenus.engine.input.controller.ControllerType;
-import org.ardenus.engine.input.controller.axis.SwitchAxis;
-import org.ardenus.engine.input.handler.WirelessInputHandler;
+import org.ardenus.input.button.ButtonSetActions;
+import org.ardenus.input.controller.ControllerButton;
+import org.ardenus.input.controller.ControllerType;
+import org.ardenus.input.controller.axis.SwitchAxis;
+import org.ardenus.input.handler.WirelessInputHandler;
 
 /**
  * A Nintendo Switch pro-controller.

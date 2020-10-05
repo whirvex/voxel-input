@@ -22,19 +22,19 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.controller.action;
+package org.ardenus.input.controller.action;
 
 import java.util.HashMap;
 
-import org.ardenus.engine.input.controller.Controller;
-import org.ardenus.engine.input.controller.ControllerButton;
-import org.ardenus.engine.input.controller.GameCubeController;
-import org.ardenus.engine.input.controller.GamepadDirection;
-import org.ardenus.engine.input.controller.keyboard.KeyboardController;
-import org.ardenus.engine.input.controller.wireless.PegaController;
-import org.ardenus.engine.input.controller.wireless.PlayStationController;
-import org.ardenus.engine.input.controller.wireless.SwitchController;
-import org.ardenus.engine.input.controller.wireless.XboxController;
+import org.ardenus.input.controller.Controller;
+import org.ardenus.input.controller.ControllerButton;
+import org.ardenus.input.controller.GameCubeController;
+import org.ardenus.input.controller.GamepadDirection;
+import org.ardenus.input.controller.keyboard.KeyboardController;
+import org.ardenus.input.controller.wireless.PegaController;
+import org.ardenus.input.controller.wireless.PlayStationController;
+import org.ardenus.input.controller.wireless.SwitchController;
+import org.ardenus.input.controller.wireless.XboxController;
 
 /**
  * A group of actions that must be completed in a sequence.

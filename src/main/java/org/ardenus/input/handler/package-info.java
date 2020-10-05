@@ -29,6 +29,6 @@
  * 
  * @author Trent Summerlin
  * @since Ardenus Input v0.0.1-SNAPSHOT
- * @see org.ardenus.engine.input.handler.InputHandler InputHandler
+ * @see org.ardenus.input.handler.InputHandler InputHandler
  */
-package org.ardenus.engine.input.handler;
+package org.ardenus.input.handler;

@@ -22,7 +22,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.controller.action;
+package org.ardenus.input.controller.action;
 
 /**
  * An action that can be done in the game by a controller.

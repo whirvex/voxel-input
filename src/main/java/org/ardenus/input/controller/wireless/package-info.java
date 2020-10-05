@@ -28,9 +28,9 @@
  * 
  * @author Trent Summerlin
  * @since Ardenus Input v0.0.1-SNAPSHOT
- * @see org.ardenus.engine.input.controller.wireless.WirelessController
+ * @see org.ardenus.input.controller.wireless.WirelessController
  *      WirelessController
- * @see org.ardenus.engine.input.controller.wireless.WirelessControllerType
+ * @see org.ardenus.input.controller.wireless.WirelessControllerType
  *      WirelessControllerType
  */
-package org.ardenus.engine.input.controller.wireless;
+package org.ardenus.input.controller.wireless;

@@ -22,8 +22,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.handler;
+package org.ardenus.input.handler;
 
+import java.awt.Window;
 import java.io.Closeable;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -43,10 +44,7 @@ import javax.usb.event.UsbPipeListener;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.ardenus.USB;
-import org.ardenus.engine.graphics.Window;
-import org.ardenus.engine.input.Input;
-import org.ardenus.engine.input.controller.Controller;
-import org.ardenus.engine.input.controller.GameCubeController;
+import org.ardenus.input.controller.GameCubeController;
 
 /**
  * An input handler that can be used to listen for input from Nintendo GameCube

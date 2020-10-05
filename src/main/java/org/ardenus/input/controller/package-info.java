@@ -28,9 +28,9 @@
  * 
  * @author Trent Summerlin
  * @since Ardenus Input v0.0.1-SNAPSHOT
- * @see org.ardenus.engine.input.controller.Controller Controller
- * @see org.ardenus.engine.input.controller.ControllerButton ControllerButton
- * @see org.ardenus.engine.input.controller.GamepadDirection GamepadDirection
- * @see org.ardenus.engine.input.controller.ControllerType ControllerType
+ * @see org.ardenus.input.controller.Controller Controller
+ * @see org.ardenus.input.controller.ControllerButton ControllerButton
+ * @see org.ardenus.input.controller.GamepadDirection GamepadDirection
+ * @see org.ardenus.input.controller.ControllerType ControllerType
  */
-package org.ardenus.engine.input.controller;
+package org.ardenus.input.controller;

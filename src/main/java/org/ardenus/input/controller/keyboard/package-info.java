@@ -32,9 +32,9 @@
  * 
  * @author Trent Summerlin
  * @since Ardenus Input v0.0.1-SNAPSHOT
- * @see org.ardenus.engine.input.controller.keyboard.KeyboardController
+ * @see org.ardenus.input.controller.keyboard.KeyboardController
  *      KeyboardController
- * @see org.ardenus.engine.input.controller.keyboard.KeyboardKey KeyboardKey
- * @see org.ardenus.engine.input.controller.keyboard.KeyCharacter KeyCharacter
+ * @see org.ardenus.input.controller.keyboard.KeyboardKey KeyboardKey
+ * @see org.ardenus.input.controller.keyboard.KeyCharacter KeyCharacter
  */
-package org.ardenus.engine.input.controller.keyboard;
+package org.ardenus.input.controller.keyboard;

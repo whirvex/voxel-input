@@ -22,9 +22,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.engine.input.controller.keyboard;
+package org.ardenus.input.controller.keyboard;
 
-import org.ardenus.engine.input.controller.ControllerButton;
+import org.ardenus.input.controller.ControllerButton;
 
 /**
  * A keyboard key.
