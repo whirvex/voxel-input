@@ -22,22 +22,25 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.input.controller;
+package org.ardenus.input.device.controller;
 
-public abstract class Controller {
-	
+import org.ardenus.input.device.InputDevice;
+
+public abstract class Controller implements InputDevice {
+
 	private int port;
-	
+
 	public Controller() {
 		this.port = -1;
 	}
-	
+
+	@Override
 	public final int getPort() {
 		return this.port;
 	}
-	
+
 	public final Controller setPort(int port) {
-		if(port > -1) {
+		if (port > -1) {
 			throw new IllegalStateException("port already set");
 		}
 		this.port = port;
