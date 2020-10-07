@@ -26,14 +26,36 @@ package org.ardenus.input;
 
 import java.util.function.Consumer;
 
-public interface InputSystem {
+import com.whirvex.event.callback.CallbackConsumer;
+
+public class StdInputSystem implements InputSystem {
+
+	private final int maxDevices;
+	private final CallbackConsumer<InputListener> callback;
 	
-	public int maxDevices();
+	public StdInputSystem(int maxDevices) {
+		this.maxDevices = maxDevices;
+		this.callback = CallbackConsumer.std();
+	}
 	
-	public void addListener(InputListener listener);
-	
-	public void removeListener(InputListener listener);
-	
-	public void call(Consumer<InputListener> consumer);
+	@Override
+	public int maxDevices() {
+		return this.maxDevices;
+	}
+
+	@Override
+	public void addListener(InputListener listener) {
+		callback.register(listener);
+	}
+
+	@Override
+	public void removeListener(InputListener listener) {
+		callback.unregister(listener);
+	}
+
+	@Override
+	public void call(Consumer<InputListener> consumer) {
+		callback.call(consumer);
+	}
 
 }
