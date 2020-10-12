@@ -48,6 +48,10 @@ public class Action {
 	/**
 	 * The name of the action. If a <code>null</code> value was specified during
 	 * construction, this field will be equal to <code>id</code>.
+	 * <p>
+	 * <b>Note:</b> This field is not taken into account for hashing or
+	 * determining the equality of two <code>Action</code> instances. It is only
+	 * used for {@link #toString()}.
 	 */
 	public final String name;
 
@@ -85,6 +89,30 @@ public class Action {
 	 */
 	public Action() {
 		this(UUID.randomUUID().toString());
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Action) {
+			Action action = (Action) obj;
+			return Objects.equals(this.id, action.id);
+		}
+		return false;
+	}
+
+	/**
+	 * Returns the name of the action.
+	 * 
+	 * @return the name of the action.
+	 */
+	@Override
+	public String toString() {
+		return this.name;
 	}
 
 }
