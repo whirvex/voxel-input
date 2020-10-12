@@ -25,16 +25,18 @@
 package org.ardenus.input.action;
 
 import java.util.Objects;
+import java.util.UUID;
 
 /**
- * An action which can be performed by an input device.
+ * An action which can be performed, usually by input devices.
  * <p>
- * Actions work by being bound to input devices and their specific buttons. This
- * allows for input listeners to listens for actions, rather than individual
- * buttons based on the type of input device.
+ * Actions work by being bound to input devices and their specific peripherals.
+ * This allows for input listeners to listens for actions, rather than
+ * individual buttons based on the type of input device.
  * 
  * @author Trent Summerlin
- * @since Ardenus Input v0.0.1-SNAPSHOT
+ * @since Ardenus Input v0.0.2-SNAPSHOT
+ * @version 0.0.2
  */
 public class Action {
 
@@ -55,7 +57,8 @@ public class Action {
 	 * @param id
 	 *            the action ID.
 	 * @param name
-	 *            the name of the action, <code>null</code> value is permitted.
+	 *            the name of the action, a <code>null</code> value is
+	 *            permitted.
 	 * @throws NullPointerException
 	 *             if <code>id</code> is <code>null</code>.
 	 */
@@ -74,6 +77,14 @@ public class Action {
 	 */
 	public Action(String id) {
 		this(id, null);
+	}
+
+	/**
+	 * Constructs a new <code>Action</code> with a randomly generated ID via
+	 * {@link UUID#randomUUID()}.
+	 */
+	public Action() {
+		this(UUID.randomUUID().toString());
 	}
 
 }
