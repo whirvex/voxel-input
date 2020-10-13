@@ -67,12 +67,12 @@ public class ActionProfile implements ActionBinds {
 	}
 
 	@Override
-	public final boolean isBound(Action action) {
+	public boolean isBound(Action action) {
 		return actions.containsKey(action);
 	}
 
 	@Override
-	public final boolean areBound(Action action, Button... buttons) {
+	public boolean areBound(Action action, Button... buttons) {
 		if (!actions.containsKey(action) || buttons == null) {
 			return false; // Action not bound, or no buttons
 		}
@@ -81,7 +81,7 @@ public class ActionProfile implements ActionBinds {
 	}
 
 	@Override
-	public final Set<Button> getBound(Action action) {
+	public Set<Button> getBound(Action action) {
 		Set<Button> bound = actions.get(action);
 		return bound != null ? Collections.unmodifiableSet(bound) : null;
 	}
