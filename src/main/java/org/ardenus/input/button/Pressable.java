@@ -28,8 +28,8 @@ package org.ardenus.input.button;
  * Represents an object which can be pressed, either virtually or in real life.
  * 
  * @author Trent Summerlin
- * @since Ardenus Input v0.0.1-SNAPSHOT
- * @version 1.0.0
+ * @since Ardenus Input v0.0.2-SNAPSHOT
+ * @version 0.0.2
  */
 public interface Pressable {
 
@@ -52,6 +52,29 @@ public interface Pressable {
 	 */
 	public static class Release {
 		// TODO: This will contain some info later, but it's not important now
+	}
+	
+	/**
+	 * Returns if this object can currently be pressed.
+	 * 
+	 * @return <code>true</code> if this object can currently be pressed,
+	 *         <code>false</code> otherwise.
+	 */
+	public default boolean isPressable() {
+		return true;
+	}
+	
+	/**
+	 * Sets whether or not this object can be pressed.
+	 * 
+	 * @param selectable
+	 *            <code>true</code> if this object can be pressed,
+	 *            <code>false</code> otherwise.
+	 * @throws UnsupportedOperationException
+	 *             always, unless implemented.
+	 */
+	public default void setPressable(boolean pressable) {
+		throw new UnsupportedOperationException("setPressable");
 	}
 
 	/**

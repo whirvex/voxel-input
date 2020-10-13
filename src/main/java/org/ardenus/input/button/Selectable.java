@@ -29,7 +29,7 @@ package org.ardenus.input.button;
  * 
  * @author Trent Summerlin
  * @since Ardenus Input v0.0.1-SNAPSHOT
- * @version 1.0.0
+ * @version 0.0.2
  */
 public interface Selectable {
 
@@ -45,6 +45,29 @@ public interface Selectable {
 	 */
 	public static class Unselect {
 		// TODO: This will contain some info later, but it's not important now
+	}
+	
+	/**
+	 * Returns if this object can currently be selected.
+	 * 
+	 * @return <code>true</code> if this object can currently be selected,
+	 *         <code>false</code> otherwise.
+	 */
+	public default boolean isSelectable() {
+		return true;
+	}
+
+	/**
+	 * Sets whether or not this object can be selected.
+	 * 
+	 * @param selectable
+	 *            <code>true</code> if this object can be selected,
+	 *            <code>false</code> otherwise.
+	 * @throws UnsupportedOperationException
+	 *             always, unless implemented.
+	 */
+	public default void setSelectable(boolean selectable) {
+		throw new UnsupportedOperationException("setSelectable");
 	}
 
 	/**
@@ -63,7 +86,6 @@ public interface Selectable {
 	 *            unselect info, guaranteed to not be <code>null</code>.
 	 */
 	public default void onUnselect(Unselect unselect) {
-
 	}
 
 }
