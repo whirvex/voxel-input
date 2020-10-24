@@ -24,6 +24,48 @@
  */
 package org.ardenus.input;
 
+import org.ardenus.input.button.Pressable;
+import org.ardenus.input.button.Selectable;
+import org.ardenus.input.device.InputDevice;
+
+/**
+ * TODO
+ * 
+ * @author Trent Summerlin
+ * @since Ardenus Input v0.0.2-SNAPSHOT
+ * @version 0.0.2
+ */
 public interface InputListener {
+
+	public default void onDeviceConnect(InputDevice device) {
+	}
+
+	public default void onDeviceDisconnect(InputDevice device) {
+	}
+
+	public default void onDevicePress(InputDevice device, Pressable pressable) {
+	}
+
+	public default void onDeviceHold(InputDevice device, Pressable pressable) {
+	}
+
+	public default void onDeviceRelease(InputDevice device,
+			Pressable pressable) {
+	}
+	
+	public default void onUISelect(Selectable selectable) {
+	}
+	
+	public default void onUIUnselect(Selectable selectable) {
+	}
+
+	public default void onUIPress(Pressable pressable) {
+	}
+
+	public default void onUIHold(Pressable pressable) {
+	}
+
+	public default void onUIRelease(Pressable pressable) {
+	}
 
 }
