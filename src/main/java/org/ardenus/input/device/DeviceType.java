@@ -26,24 +26,52 @@ package org.ardenus.input.device;
 
 import java.util.Objects;
 
+/**
+ * TODO
+ * 
+ * @author Trent Summerlin
+ * @since Ardenus Input v0.0.2-SNAPSHOT
+ * @version 0.0.2
+ */
 public class DeviceType {
 
+	/**
+	 * The standard keyboard and mouse used by the computer.
+	 */
 	public static final DeviceType KEYBOARD = of("Keyboard & Mouse");
 	
+	/**
+	 * A Microsoft XBOX One/XBOX 360 controller.
+	 */
 	public static final DeviceType XBOX = of("Microsoft XBOX One/XBOX 360 controller");
 
+	/**
+	 * Creates a new type of input device.
+	 *
+	 * @param name
+	 *            the name of the device type.
+	 * @throws NullPointerException
+	 *             if <code>name</code> is <code>null</code>.
+	 */
 	private static DeviceType of(String name) {
 		return new DeviceType(name);
 	}
+	
+	/**
+	 * The name of the device.
+	 */
+	public final String name;
 
-	private final String name;
-
-	private DeviceType(String name) throws NullPointerException {
+	/**
+	 * Constructs a new <code>DeviceType</code>.
+	 *
+	 * @param name
+	 *            the name of the device type.
+	 * @throws NullPointerException
+	 *             if <code>name</code> is <code>null</code>.
+	 */
+	public DeviceType(String name) {
 		this.name = Objects.requireNonNull(name, "name cannot be null");
-	}
-
-	public String getName() {
-		return this.name;
 	}
 
 }
