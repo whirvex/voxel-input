@@ -26,6 +26,13 @@ package org.ardenus.input;
 
 import java.util.function.Consumer;
 
+/**
+ * TODO
+ * 
+ * @author Trent Summerlin
+ * @since Ardenus Input v0.0.2-SNAPSHOT
+ * @version 0.0.2
+ */
 public interface InputSystem {
 	
 	public int maxDevices();
@@ -35,5 +42,11 @@ public interface InputSystem {
 	public void removeListener(InputListener listener);
 	
 	public void call(Consumer<InputListener> consumer);
+	
+	public void update(long delta);
+	
+	public default void update() {
+		this.update(-1);
+	}
 
 }

@@ -28,6 +28,13 @@ import java.util.function.Consumer;
 
 import com.whirvex.event.callback.CallbackConsumer;
 
+/**
+ * TODO
+ * 
+ * @author Trent Summerlin
+ * @since Ardenus Input v0.0.2-SNAPSHOT
+ * @version 0.0.2
+ */
 public class StdInputSystem implements InputSystem {
 
 	private final int maxDevices;
@@ -56,6 +63,11 @@ public class StdInputSystem implements InputSystem {
 	@Override
 	public void call(Consumer<InputListener> consumer) {
 		callback.call(consumer);
+	}
+
+	@Override
+	public void update(long delta) {
+		
 	}
 
 }
