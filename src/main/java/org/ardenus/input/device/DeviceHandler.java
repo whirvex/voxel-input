@@ -24,6 +24,15 @@
  */
 package org.ardenus.input.device;
 
-public class DeviceHandler {
-
+/**
+ * TODO
+ * 
+ * @author Trent Summerlin
+ * @since Ardenus Input v0.0.2-SNAPSHOT
+ * @version 0.0.2
+ */
+public interface DeviceHandler {
+	
+	public void update(long delta);
+	
 }
