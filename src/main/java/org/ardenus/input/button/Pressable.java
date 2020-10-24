@@ -53,7 +53,7 @@ public interface Pressable {
 	public static class Release {
 		// TODO: This will contain some info later, but it's not important now
 	}
-	
+
 	/**
 	 * Returns if this object can currently be pressed.
 	 * 
@@ -63,7 +63,7 @@ public interface Pressable {
 	public default boolean isPressable() {
 		return true;
 	}
-	
+
 	/**
 	 * Sets whether or not this object can be pressed.
 	 * 

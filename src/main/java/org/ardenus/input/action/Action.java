@@ -27,6 +27,8 @@ package org.ardenus.input.action;
 import java.util.Objects;
 import java.util.UUID;
 
+import org.ardenus.input.button.Pressable;
+
 /**
  * An action which can be performed, usually by input devices.
  * <p>
@@ -38,7 +40,7 @@ import java.util.UUID;
  * @since Ardenus Input v0.0.2-SNAPSHOT
  * @version 0.0.2
  */
-public class Action {
+public class Action implements Pressable {
 
 	/**
 	 * The action ID.
