@@ -24,6 +24,13 @@
  */
 package org.ardenus.input.device;
 
+/**
+ * TODO
+ * 
+ * @author Trent Summerlin
+ * @since Ardenus Input v0.0.2-SNAPSHOT
+ * @version 0.0.2
+ */
 public interface InputDevice {
 	
 	public int getPort();
