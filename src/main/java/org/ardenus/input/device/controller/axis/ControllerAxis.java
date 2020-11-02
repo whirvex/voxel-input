@@ -39,7 +39,7 @@ public abstract class ControllerAxis {
 		if (controller == null) {
 			return false; // No controller
 		}
-		return Math.abs(fixAxis(axis)) >= 2.0F / 3.0F;
+		return Math.abs(getAxis(axis)) >= 2.0F / 3.0F;
 	}
 	
 	public float getAxis(float axis) {

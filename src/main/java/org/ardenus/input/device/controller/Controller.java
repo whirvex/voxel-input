@@ -167,7 +167,7 @@ public abstract class Controller implements InputDevice, ActionBinds {
 		}
 
 		// Bind buttons
-		Set<ControllerButton> bound = state.buttons;
+		Set<Button> bound = state.buttons;
 		for (ControllerButton button : buttons) {
 			bound.add(button);
 		}
@@ -198,7 +198,7 @@ public abstract class Controller implements InputDevice, ActionBinds {
 		this.checkPresence(buttons);
 
 		// Unbind buttons from action
-		Set<ControllerButton> bound = actions.get(action).buttons;
+		Set<Button> bound = actions.get(action).buttons;
 		for (ControllerButton button : buttons) {
 			bound.remove(button);
 		}
@@ -236,9 +236,11 @@ public abstract class Controller implements InputDevice, ActionBinds {
 	 */
 	public void attach(Controller controller) {
 		Objects.requireNonNull(controller, "controller cannot be null");
-		controllers.add(controller);
+		// TODO: Odd, this looks like it was copy pasted from the
+		// ActionProfile class? Gotta fix this implementation later.
+		// controllers.add(controller);
 	}
-
+	
 	/**
 	 * Detaches a controller from the profile.
 	 * <p>
@@ -251,7 +253,9 @@ public abstract class Controller implements InputDevice, ActionBinds {
 	 *            the controller to detach.
 	 */
 	public void detach(Controller controller) {
-		controllers.remove(controller);
+		// TODO: Odd, this looks like it was copy pasted from the
+		// ActionProfile class? Gotta fix this implementation later.
+		// controllers.remove(controller);
 	}
 
 	@Override

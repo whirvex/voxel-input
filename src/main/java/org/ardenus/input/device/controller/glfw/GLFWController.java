@@ -87,6 +87,11 @@ public abstract class GLFWController extends Controller {
 	public final String getName() {
 		return this.name;
 	}
+	
+	@Override
+	public final int getPort() {
+		return -1; // TODO: Implement this
+	}
 
 	/**
 	 * Returns if this controller will disconnect if a set of disconnect buttons
