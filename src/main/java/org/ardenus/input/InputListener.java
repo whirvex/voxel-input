@@ -25,7 +25,6 @@
 package org.ardenus.input;
 
 import org.ardenus.input.button.Pressable;
-import org.ardenus.input.button.Selectable;
 import org.ardenus.input.device.InputDevice;
 
 /**
@@ -51,21 +50,6 @@ public interface InputListener {
 
 	public default void onDeviceRelease(InputDevice device,
 			Pressable pressable) {
-	}
-	
-	public default void onUISelect(Selectable selectable) {
-	}
-	
-	public default void onUIUnselect(Selectable selectable) {
-	}
-
-	public default void onUIPress(Pressable pressable) {
-	}
-
-	public default void onUIHold(Pressable pressable) {
-	}
-
-	public default void onUIRelease(Pressable pressable) {
 	}
 
 }
