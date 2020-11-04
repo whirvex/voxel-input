@@ -35,6 +35,8 @@ import java.util.function.Consumer;
  */
 public interface InputSystem {
 	
+	public static final long DELTA_AUTO = 0xFFFFFFFFFFFFFFFFL;
+	
 	public int maxDevices();
 	
 	public void addListener(InputListener listener);
@@ -46,7 +48,7 @@ public interface InputSystem {
 	public void update(long delta);
 	
 	public default void update() {
-		this.update(-1);
+		this.update(DELTA_AUTO);
 	}
 
 }

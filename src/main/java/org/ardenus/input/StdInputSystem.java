@@ -39,12 +39,13 @@ public class StdInputSystem implements InputSystem {
 
 	private final int maxDevices;
 	private final CallbackConsumer<InputListener> callback;
-	
+	private long lastUpdate;
+
 	public StdInputSystem(int maxDevices) {
 		this.maxDevices = maxDevices;
 		this.callback = CallbackConsumer.std();
 	}
-	
+
 	@Override
 	public int maxDevices() {
 		return this.maxDevices;
@@ -67,7 +68,18 @@ public class StdInputSystem implements InputSystem {
 
 	@Override
 	public void update(long delta) {
+		if (delta < 0) {
+			throw new IllegalArgumentException("delta cannot be negative");
+		}
+
+		long currentTime = System.currentTimeMillis();
+		if (delta == DELTA_AUTO) {
+			delta = lastUpdate > 0 ? currentTime - lastUpdate : 1;
+		}
 		
+		
+
+		this.lastUpdate = currentTime;
 	}
 
 }

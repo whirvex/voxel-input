@@ -41,7 +41,7 @@ public class PressableState {
 	public boolean state;
 
 	/**
-	 * How long the objet has been held down in milliseconds, if
+	 * How long the object has been held down in milliseconds, if
 	 * <code>state</code> is <code>true</code>.
 	 */
 	public long holdTime;
