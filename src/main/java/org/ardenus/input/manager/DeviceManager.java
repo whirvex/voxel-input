@@ -22,7 +22,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.input.device;
+package org.ardenus.input.manager;
 
 /**
  * TODO
@@ -31,7 +31,7 @@ package org.ardenus.input.device;
  * @since Ardenus Input v0.0.2-SNAPSHOT
  * @version 0.0.2
  */
-public interface DeviceHandler {
+public interface DeviceManager {
 	
 	public void update(long delta);
 	
