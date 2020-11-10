@@ -19,7 +19,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<lwjgl.version>3.2.1</lwjgl.version>
+		<lwjgl.version>3.2.3</lwjgl.version>
 	</properties>
 	
 	<!-- Project licensing -->
@@ -36,6 +36,18 @@
 		<name>Ardenus Studios</name>
 		<url>https://ardenus.org/</url>
 	</organization>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.lwjgl</groupId>
+				<artifactId>lwjgl-bom</artifactId>
+				<version>${lwjgl.version}</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	
 	<dependencies>
 		<!-- Logging interface -->
@@ -58,6 +70,32 @@
 			<artifactId>event</artifactId>
 			<version>1.0.0-BETA</version>
 		</dependency>
+		
+		<!-- LWJGL -->
+		<dependency>
+			<groupId>org.lwjgl</groupId>
+			<artifactId>lwjgl</artifactId>
+		</dependency>
+		
+		<!-- GLFW -->
+		<dependency>
+			<groupId>org.lwjgl</groupId>
+			<artifactId>lwjgl-glfw</artifactId>
+		</dependency>
+		
+		<!-- LWJGL natives -->
+		<dependency>
+			<groupId>org.lwjgl</groupId>
+			<artifactId>lwjgl</artifactId>
+			<classifier>${lwjgl.natives}</classifier>
+		</dependency>
+		
+		<!-- GLFW natives -->
+		<dependency>
+			<groupId>org.lwjgl</groupId>
+			<artifactId>lwjgl-glfw</artifactId>
+			<classifier>${lwjgl.natives}</classifier>
+		</dependency>
 	
 		<!-- Testing framework -->
 		<dependency>
@@ -69,12 +107,80 @@
 	</dependencies>
 	
 	<profiles>
-		<!-- Windows native bindings -->
+		<!-- Linux AMD64 natives -->
 		<profile>
-			<id>lwjgl-natives-windows</id>
+			<id>lwjgl-natives-linux-amd64</id>
+			<activation>
+				<os>
+					<family>unix</family>
+					<arch>amd64</arch>
+				</os>
+			</activation>
+			<properties>
+				<lwjgl.natives>natives-linux</lwjgl.natives>
+			</properties>
+		</profile>
+		
+		<!-- Linux Arch x64 natives -->
+		<profile>
+			<id>lwjgl-natives-linux-aarch64</id>
+			<activation>
+				<os>
+					<family>unix</family>
+					<arch>aarch64</arch>
+				</os>
+			</activation>
+			<properties>
+				<lwjgl.natives>natives-linux-arm64</lwjgl.natives>
+			</properties>
+		</profile>
+		
+		<!-- Linux ARM natives -->
+		<profile>
+			<id>lwjgl-natives-linux-arm</id>
+			<activation>
+				<os>
+					<family>unix</family>
+					<arch>arm</arch>
+				</os>
+			</activation>
+			<properties>
+				<lwjgl.natives>natives-linux-arm32</lwjgl.natives>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>lwjgl-natives-linux-arm32</id>
+			<activation>
+				<os>
+					<family>unix</family>
+					<arch>arm32</arch>
+				</os>
+			</activation>
+			<properties>
+				<lwjgl.natives>natives-linux-arm32</lwjgl.natives>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>lwjgl-natives-macos-amd64</id>
+			<activation>
+				<os>
+					<family>mac</family>
+					<arch>amd64</arch>
+				</os>
+			</activation>
+			<properties>
+				<lwjgl.natives>natives-macos</lwjgl.natives>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>lwjgl-natives-windows-amd64</id>
 			<activation>
 				<os>
 					<family>windows</family>
+					<arch>amd64</arch>
 				</os>
 			</activation>
 			<properties>
@@ -82,29 +188,16 @@
 			</properties>
 		</profile>
 		
-		<!-- MacOS native bindings -->
 		<profile>
-			<id>lwjgl-natives-macos</id>
+			<id>lwjgl-natives-windows-x86</id>
 			<activation>
 				<os>
-					<family>mac</family>
+					<family>windows</family>
+					<arch>x86</arch>
 				</os>
 			</activation>
 			<properties>
-				<lwjgl.natives>natives-macos</lwjgl.natives>
-			</properties>
-		</profile>
-
-		<!-- Linux native bindings -->
-		<profile>
-			<id>lwjgl-natives-linux</id>
-			<activation>
-				<os>
-					<family>unix</family>
-				</os>
-			</activation>
-			<properties>
-				<lwjgl.natives>natives-linux</lwjgl.natives>
+				<lwjgl.natives>natives-windows-x86</lwjgl.natives>
 			</properties>
 		</profile>
 	</profiles>
