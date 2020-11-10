@@ -22,7 +22,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
  * USA
  */
-package org.ardenus.input.device.controller;
+package org.ardenus.input.button;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

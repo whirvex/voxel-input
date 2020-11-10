@@ -27,7 +27,7 @@ package org.ardenus.input.device.controller.glfw;
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 
-import org.ardenus.input.device.controller.ButtonPresent;
+import org.ardenus.input.button.ButtonPresent;
 import org.ardenus.input.device.controller.ControllerButton;
 
 /**
@@ -58,8 +58,6 @@ public class XBOXController extends GLFWController {
 			BUTTON_RIGHT = new GLFWButton(11, "Right", XBOXController.class),
 			BUTTON_DOWN = new GLFWButton(12, "Down", XBOXController.class),
 			BUTTON_LEFT = new GLFWButton(13, "Left", XBOXController.class);
-
-	
 	
 	public XBOXController(int joystickId, String guid, String name) {
 		super(joystickId, guid, name);
