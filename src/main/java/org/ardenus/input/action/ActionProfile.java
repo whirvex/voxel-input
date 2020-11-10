@@ -24,7 +24,7 @@
  */
 package org.ardenus.input.action;
 
-import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -72,12 +72,12 @@ public class ActionProfile implements ActionBinds {
 	}
 
 	@Override
-	public boolean areBound(Action action, Button... buttons) {
+	public boolean areBound(Action action, Collection<Button> buttons) {
 		if (!actions.containsKey(action) || buttons == null) {
 			return false; // Action not bound, or no buttons
 		}
 		Set<Button> bound = actions.get(action);
-		return bound.containsAll(Arrays.asList(buttons));
+		return bound.containsAll(buttons);
 	}
 
 	@Override
@@ -87,7 +87,7 @@ public class ActionProfile implements ActionBinds {
 	}
 
 	@Override
-	public void bind(Action action, Button... buttons) {
+	public void bind(Action action, Collection<Button> buttons) {
 		Objects.requireNonNull(action, "action cannot be null");
 		Objects.requireNonNull(buttons, "buttons cannot be null");
 
@@ -106,14 +106,14 @@ public class ActionProfile implements ActionBinds {
 	}
 
 	@Override
-	public void unbind(Action action, Button... buttons) {
+	public void unbind(Action action, Collection<Button> buttons) {
 		if (!actions.containsKey(action) || buttons == null) {
 			return; // Nothing to unbind
 		}
 
 		// Unbind buttons from action
 		Set<Button> bound = actions.get(action);
-		bound.removeAll(Arrays.asList(buttons));
+		bound.removeAll(buttons);
 		if (bound.isEmpty()) {
 			actions.remove(action);
 		}

@@ -24,6 +24,9 @@
  */
 package org.ardenus.input.action;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Objects;
 import java.util.Set;
 
 import org.ardenus.input.button.Button;
@@ -49,10 +52,24 @@ public interface ActionBinds {
 	public boolean isBound(Action action);
 
 	/**
+	 * Returns if a set of buttons are bound to an action.
+	 * 
+	 * @param action
+	 *            the action.
+	 * @param buttons
+	 *            the buttons.
+	 * @return <code>true</code> if all <code>buttons</code> are bound to
+	 *         <code>action</code>, <code>false</code> otherwise.
+	 */
+	public boolean areBound(Action action, Collection<Button> buttons);
+
+	/**
 	 * Returns if a button is bound to an action.
 	 * <p>
-	 * This function is a shorthand for {@link #areBound(Action, Button...)}
-	 * with <code>button</code> being the only value in the array of the second
+	 * <p>
+	 * This function is a shorthand for {@link #areBound(Action, Collection)}
+	 * with <code>button</code> being wrapped into a list with a single value
+	 * using {@link Arrays#asList(Object...)} and passed as the second
 	 * parameter. It is mainly for grammar nuts like Whirvis.
 	 * 
 	 * @param action
@@ -63,11 +80,18 @@ public interface ActionBinds {
 	 *         <code>action</code>, <code>false</code> otherwise.
 	 */
 	public default boolean isBound(Action action, Button button) {
-		return this.areBound(action, button);
+		if (button != null) {
+			return this.areBound(action, Arrays.asList(button));
+		}
+		return false;
 	}
 
 	/**
 	 * Returns if a set of buttons are bound to an action.
+	 * <p>
+	 * This function is a shorthand for {@link #areBound(Action, Collection)}
+	 * with <code>buttons</code> being wrapped into a list using
+	 * {@link Arrays#asList(Object...)} and passed as the second parameter.
 	 * 
 	 * @param action
 	 *            the action.
@@ -76,7 +100,12 @@ public interface ActionBinds {
 	 * @return <code>true</code> if all <code>buttons</code> are bound to
 	 *         <code>action</code>, <code>false</code> otherwise.
 	 */
-	public boolean areBound(Action action, Button... buttons);
+	public default boolean areBound(Action action, Button... buttons) {
+		if (buttons != null) {
+			return this.areBound(action, Arrays.asList(buttons));
+		}
+		return false;
+	}
 
 	/**
 	 * Returns all buttons that can trigger an action.
@@ -103,7 +132,26 @@ public interface ActionBinds {
 	 *             if <code>action</code>, <code>buttons</code>, or a value
 	 *             inside of <code>buttons</code> are <code>null</code>.
 	 */
-	public void bind(Action action, Button... buttons);
+	public void bind(Action action, Collection<Button> buttons);
+
+	/**
+	 * Binds a set of buttons to an action.
+	 * <p>
+	 * Any previously bound buttons will stay bound to the action. To unbind a
+	 * button from an action, use {@link #unbind(Action, ControllerButton...)}.
+	 * 
+	 * @param action
+	 *            the action to bind these buttons to.
+	 * @param buttons
+	 *            the buttons which will trigger <code>action</code>.
+	 * @throws NullPointerException
+	 *             if <code>action</code>, <code>buttons</code>, or a value
+	 *             inside of <code>buttons</code> are <code>null</code>.
+	 */
+	public default void bind(Action action, Button... buttons) {
+		Objects.requireNonNull(buttons, "buttons cannot be null");
+		this.bind(action, Arrays.asList(buttons));
+	}
 
 	/**
 	 * Unbinds a set of buttons from an action.
@@ -114,7 +162,22 @@ public interface ActionBinds {
 	 *            the buttons to unbind from <code>action</code>.
 	 * @see #bind(Action, Button...)
 	 */
-	public void unbind(Action action, Button... buttons);
+	public void unbind(Action action, Collection<Button> buttons);
+
+	/**
+	 * Unbinds a set of buttons from an action.
+	 * 
+	 * @param action
+	 *            the action to unbind these buttons from.
+	 * @param buttons
+	 *            the buttons to unbind from <code>action</code>.
+	 * @see #bind(Action, Button...)
+	 */
+	public default void unbind(Action action, Button... buttons) {
+		if (buttons != null) {
+			this.unbind(action, Arrays.asList(buttons));
+		}
+	}
 
 	/**
 	 * Unbinds an action entirely.
