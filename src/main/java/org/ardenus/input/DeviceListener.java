@@ -34,22 +34,21 @@ import org.ardenus.input.device.InputDevice;
  * @since Ardenus Input v0.0.2-SNAPSHOT
  * @version 0.0.2
  */
-public interface InputListener {
+public interface DeviceListener {
 
-	public default void onDeviceConnect(InputDevice device) {
+	public default void onConnect(InputDevice device) {
 	}
 
-	public default void onDeviceDisconnect(InputDevice device) {
+	public default void onDisconnect(InputDevice device) {
 	}
 
-	public default void onDevicePress(InputDevice device, Pressable pressable) {
+	public default void onPress(InputDevice device, Pressable pressable) {
 	}
 
-	public default void onDeviceHold(InputDevice device, Pressable pressable) {
+	public default void onHold(InputDevice device, Pressable pressable) {
 	}
 
-	public default void onDeviceRelease(InputDevice device,
-			Pressable pressable) {
+	public default void onRelease(InputDevice device, Pressable pressable) {
 	}
 
 }
