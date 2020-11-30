@@ -26,6 +26,8 @@ package org.ardenus.input;
 
 import java.util.function.Consumer;
 
+import org.ardenus.input.manager.DeviceManager;
+
 /**
  * TODO
  * 
@@ -34,19 +36,30 @@ import java.util.function.Consumer;
  * @version 0.0.2
  */
 public interface InputSystem {
-	
+
 	public static final long DELTA_AUTO = 0xFFFFFFFFFFFFFFFFL;
-	
+
+	/**
+	 * Returns the maximum amount of devices that can be connected to this input
+	 * system at once.
+	 * 
+	 * @return the maximum amount of devices that can be connected to this input
+	 *         system at once, <code>-1</code> if there is no maximum.
+	 */
 	public int maxDevices();
 	
-	public void addListener(InputListener listener);
+	public void register(DeviceManager manager, Class<?> devices);
 	
-	public void removeListener(InputListener listener);
-	
-	public void call(Consumer<InputListener> consumer);
-	
+	public void unregister(DeviceManager manager);
+
+	public void addListener(DeviceListener listener);
+
+	public void removeListener(DeviceListener listener);
+
+	public void call(Consumer<DeviceListener> consumer);
+
 	public void update(long delta);
-	
+
 	public default void update() {
 		this.update(DELTA_AUTO);
 	}
