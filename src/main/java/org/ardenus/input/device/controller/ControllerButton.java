@@ -33,7 +33,7 @@ import org.ardenus.input.device.DeviceButton;
  * @since Ardenus Input v0.0.2-SNAPSHOT
  * @version 0.0.2
  */
-public abstract class ControllerButton extends DeviceButton {
+public class ControllerButton extends DeviceButton {
 
 	/**
 	 * Constructs a new <code>ControllerButton</code>.
