@@ -93,11 +93,23 @@ public class Action implements Pressable {
 		this(UUID.randomUUID().toString());
 	}
 
+	/**
+	 * {@inheritDoc}
+	 * <p>
+	 * The hash code of an <code>Action</code> object is based on its ID, with
+	 * its name being discarded.
+	 */
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 * <p>
+	 * Two <code>Action</code> objects are considered to be equal if their IDs
+	 * are equal, regardless of name.
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof Action) {
