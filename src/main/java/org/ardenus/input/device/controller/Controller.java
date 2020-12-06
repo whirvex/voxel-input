@@ -24,19 +24,7 @@
  */
 package org.ardenus.input.device.controller;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
-
-import org.ardenus.input.action.Action;
-import org.ardenus.input.action.ActionBinds;
-import org.ardenus.input.action.ActionProfile;
-import org.ardenus.input.action.ActionState;
-import org.ardenus.input.button.Button;
-import org.ardenus.input.button.PressableState;
+import org.ardenus.input.device.InputData;
 import org.ardenus.input.device.InputDevice;
 
 /**
@@ -48,11 +36,16 @@ import org.ardenus.input.device.InputDevice;
  */
 public abstract class Controller extends InputDevice {
 
-	public static final int ANALOG_LEFT = 0, ANALOG_RIGHT = 1,
-			ANALOG_TRIGGER_LEFT = 2, ANALOG_TRIGGER_RIGHT = 3;
-	
-	public abstract int getPort();
-
-	
+	/**
+	 * Constructs a new <code>Controller</code>.
+	 * 
+	 * @param data
+	 *            the input data.
+	 * @throws NullPointerException
+	 *             if <code>data</code> is <code>null</code>.
+	 */
+	public Controller(InputData data) {
+		super(data);
+	}
 
 }
